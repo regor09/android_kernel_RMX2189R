@@ -12,11 +12,11 @@ CHATID=-4038162495
 curl -X POST --silent --output /dev/null https://api.telegram.org/bot6958149447:AAF-GLC5WcpN3Zb9G9XWRL2uiiMX9exbKWc/sendMessage -d chat_id=${CHATID} -d text="|| Starting cooking ||"
 sleep 10s
 # Package
-sudo apt update -y && sudo apt upgrade -y && sudo apt install nano bc bison ca-certificates curl flex gcc git libc6-dev libssl-dev openssl python-is-python3 ssh wget zip zstd make clang gcc-arm-linux-gnueabi software-properties-common build-essential libarchive-tools gcc-aarch64-linux-gnu -y && sudo apt install build-essential -y && sudo apt install libssl-dev libffi-dev libncurses5-dev zlib1g zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev make gcc -y && sudo apt install pigz -y && sudo apt install python2 -y && sudo apt install python3 -y
+sudo apt update && sudo apt install nano bc bison ca-certificates curl flex gcc git libc6-dev libssl-dev openssl python-is-python3 ssh wget zip zstd make clang gcc-arm-linux-gnueabi software-properties-common build-essential libarchive-tools gcc-aarch64-linux-gnu -y && sudo apt install build-essential -y && sudo apt install libssl-dev libffi-dev libncurses5-dev zlib1g zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev make gcc -y && sudo apt install pigz -y && sudo apt install python2 -y && sudo apt install python3 -y
 # Clone
 git clone --depth=1 https://github.com/kdrag0n/proton-clang clang
-git clone https://github.com/EternalX-project/aarch64-linux-gnu gcc64
-git clone https://github.com/EternalX-project/arm-linux-gnueabi gcc32
+git clone --depth=1 https://github.com/EternalX-project/aarch64-linux-gnu gcc64
+git clone --depth=1 https://github.com/EternalX-project/arm-linux-gnueabi gcc32
 git clone --depth=1 https://github.com/picasso09/AnyKernel3 anykernel
 # KSU (KernelSU). 0= No. 1= Yes.
 KSU=1
