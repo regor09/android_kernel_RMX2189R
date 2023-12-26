@@ -42,8 +42,8 @@ make -j$(nproc --all) O=out \
                       ARCH=arm64 \
                       CC="clang" \
                       CLANG_TRIPLE=aarch64-linux-gnu- \
-                      CROSS_COMPILE="${PWD}/gcc64/bin/aarch64-elf-" \
-                      CROSS_COMPILE_ARM32="${PWD}/gcc32/bin/arm-eabi-" \
+                      CROSS_COMPILE="${PWD}/gcc64/bin/aarch64-linux-gnu-" \
+                      CROSS_COMPILE_ARM32="${PWD}/gcc32/bin/arm-linux-gnueabihf-" \
 V=0 2>&1 | tee log.txt
 
 if [[ -f "out/arch/arm64/boot/Image.gz" ]]; then
